@@ -1,0 +1,12 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-color: $color-background-primary;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}

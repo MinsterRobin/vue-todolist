@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Fonts
+$font-family-primary: 'Montserrat', sans-serif;
+$font-family-secondary: 'Raleway', sans-serif;
+
+$font-size-xs: 1.2rem;
+$font-size-s: 1.4rem;
+$font-size-m: 1.6rem;
+$font-size-l: 1.8rem;
+$font-size-xl: 2.4rem;
+
+/// Colors
+$color-primary: #2F80ED;
+
+$color-text: #4F4F4F;
+$color-text-secondary: #828282;
+$color-text-tertiary: #333333;
+
+$color-background-primary: #F2F2F2;
+$color-background-secondary: #FFFFFF;
+
+/// Miscs
+$border-radius: 12px;
+
+/// Breakpoints map
+$media-direction: max;
+$breakpoints: (
+        'small': 320px,
+        'medium': 768px,
+        'large': 1024px,
+) !default;
+
+/// Container's maximum width
+$max-width: 1520px !default;
