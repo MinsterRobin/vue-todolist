@@ -11,7 +11,7 @@
 <style lang="scss" scoped>
     p {
         font: {
-            family: $font-family-primary;
+            family: $font-family-secondary;
             weight: 700;
             size: $font-size-xxl;
         };

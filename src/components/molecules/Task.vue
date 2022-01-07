@@ -1,10 +1,12 @@
 <template>
-    <button>Add</button>
+    <Checkbox/>
 </template>
 
 <script>
+    import Checkbox from "@/components/atoms/Checkbox";
     export default {
-        name: "Task"
+        name: "Task",
+        components: {Checkbox}
     }
 </script>
 

@@ -21,5 +21,13 @@
         border-radius: 12px;
         padding: 12px 20px;
         width: 100%;
+
+        &::placeholder {
+            font: {
+                family: $font-family-primary;
+                weight: 400;
+                size: $font-size-s;
+            }
+        }
     }
 </style>

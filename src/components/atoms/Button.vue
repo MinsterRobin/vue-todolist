@@ -18,6 +18,7 @@
     .button {
         background-color: #2F80ED;
         padding: 20px 40px;
+        max-width: min-content;
         box-shadow: 0 2px 6px rgba(127, 177, 243, 0.4);
         border-radius: 12px;
         border: none;
