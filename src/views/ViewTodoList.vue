@@ -3,7 +3,8 @@
         <H1>#todo</H1>
         <TabsBar />
         <TaskAdder/>
-        <Task/>
+        <Task task-text="C'est une tâche" :checked="true"/>
+        <Task task-text="C'est une tâche" :checked="false"/>
     </div>
 
 </template>

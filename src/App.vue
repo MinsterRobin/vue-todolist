@@ -5,13 +5,12 @@
 </template>
 
 <script>
-
     import ViewTodoList from "@/views/ViewTodoList";
     export default {
         name: 'App',
         components: {
             ViewTodoList,
-        }
+        },
     }
 </script>
 
