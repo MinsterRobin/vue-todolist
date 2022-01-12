@@ -1,22 +1,17 @@
 <template>
     <div class="test">
         <H1>#todo</H1>
-        <TabsBar />
-        <TaskAdder/>
-        <Task task-text="C'est une tâche" :checked="true"/>
-        <Task task-text="C'est une tâche" :checked="false"/>
+        <TodoList />
     </div>
 
 </template>
 
 <script>
     import H1 from "@/components/atoms/H1";
-    import TabsBar from "@/components/molecules/TabsBar";
-    import Task from "@/components/molecules/Task";
-    import TaskAdder from "@/components/molecules/TaskAdder";
+    import TodoList from "@/components/organisms/TodoList";
     export default {
         name: "ViewTodoList",
-        components: {TaskAdder, Task, TabsBar, H1}
+        components: {TodoList, H1}
     }
 </script>
 
