@@ -13,7 +13,12 @@
     import Task from "@/components/molecules/Task";
     export default {
         name: "TodoList",
-        components: {Task, TaskAdder, TabsBar}
+        components: {Task, TaskAdder, TabsBar},
+        methods: {
+            completeTask(id) {
+                console.log(id);
+            }
+        }
     }
 </script>
 

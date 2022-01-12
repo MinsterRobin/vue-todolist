@@ -1,15 +1,13 @@
 <template>
     <div class="task">
-        <Checkbox/>
-        <p class="task__text" v-bind:class="{task__textChecked: checked}">{{count}}</p>
+        <input class="checkbox" type="checkbox" v-model="checked">
+        <p class="task__text" v-bind:class="{task__textChecked: checked}">{{taskText}}</p>
     </div>
 </template>
 
 <script>
-    import Checkbox from "@/components/atoms/Checkbox";
     export default {
         name: "Task",
-        components: {Checkbox},
         props: {
             taskText: {
                 type: String,
@@ -23,7 +21,8 @@
         computed: {
             count() {
                 return this.$store.state.count;
-            }
+            },
+
         }
     }
 </script>
@@ -45,6 +44,11 @@
             &Checked {
                 text-decoration: line-through;
             }
+        }
+
+        &__checkbox {
+            height: 24px;
+            width: 24px;
         }
     }
 </style>
