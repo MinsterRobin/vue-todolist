@@ -4,11 +4,16 @@ import {createStore} from "vuex";
 const store = createStore({
     state () {
         return {
-            count: 0
+            tasks: [
+                {
+                    content: "Do something",
+                    completed: false,
+                }
+            ]
         }
     },
     mutations: {
-        increment (state) {
+        addTask (state) {
             state.count++
         }
     }

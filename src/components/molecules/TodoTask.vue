@@ -1,21 +1,25 @@
 <template>
     <div class="task">
-        <input class="checkbox" type="checkbox" v-model="checked">
+        <input class="checkbox" type="checkbox" :inputValue="" @change='$emit($event.target.value)'>
         <p class="task__text" v-bind:class="{task__textChecked: checked}">{{taskText}}</p>
     </div>
 </template>
 
 <script>
     export default {
-        name: "Task",
+        name: "TodoTask",
         props: {
             taskText: {
                 type: String,
                 required: true
             },
+            inputValue: {
+                type: String,
+                required: true
+            },
             checked: {
                 type: Boolean,
-                required: true
+                required: false
             }
         },
         computed: {
