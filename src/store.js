@@ -6,9 +6,13 @@ const store = createStore({
         return {
             tasks: [
                 {
-                    content: "Do something",
+                    content: "tâche 1",
                     completed: false,
-                }
+                },
+                {
+                    content: "tâche 2",
+                    completed: true,
+                },
             ]
         }
     },

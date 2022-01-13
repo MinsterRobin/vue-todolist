@@ -4,8 +4,8 @@
         <TaskAdder />
         <div v-for="(task, index) in getTasks" :key="index" class="todolist__tasks">
             <div>
-                <TodoTask :task-text="task.content" :input-value="index" v-model:checked="task.completed" />
-                <p>{{checked}}</p>
+                <TodoTask :task-text="task.content" v-model:completed="task.completed" />
+                <p>{{task.completed}}</p>
             </div>
         </div>
     </div>
@@ -19,6 +19,14 @@
     export default {
         name: "TodoList",
         components: {TodoTask, TaskAdder, TabsBar},
+        // data() {
+        //     return {
+        //         task: {
+        //             content: "tâche 1",
+        //             completed: false,
+        //         },
+        //     }
+        // },
         methods: {
             completeTask(id) {
                 console.log(id);

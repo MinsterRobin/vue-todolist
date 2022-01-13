@@ -1,7 +1,11 @@
 <template>
     <div class="task">
-        <input class="checkbox" type="checkbox" :inputValue="" @change='$emit($event.target.value)'>
-        <p class="task__text" v-bind:class="{task__textChecked: checked}">{{taskText}}</p>
+        <input
+            class="checkbox"
+            type="checkbox"
+            :checked="completed"
+            @change='$emit("update:completed", $event.target.checked)' />
+        <p class="task__text" v-bind:class="{task__textChecked: completed}">{{taskText}}</p>
     </div>
 </template>
 
@@ -15,9 +19,9 @@
             },
             inputValue: {
                 type: String,
-                required: true
+                required: false
             },
-            checked: {
+            completed: {
                 type: Boolean,
                 required: false
             }
