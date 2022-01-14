@@ -8,6 +8,7 @@
                 <p>{{task.completed}}</p>
             </div>
         </div>
+        <TestTest :value="returnValue" @update="ok($event, task.content)"/>
     </div>
 </template>
 
@@ -15,21 +16,27 @@
     import TabsBar from "@/components/molecules/TabsBar";
     import TaskAdder from "@/components/molecules/TaskAdder";
     import TodoTask from "@/components/molecules/TodoTask";
+    import TestTest from "@/components/atoms/TestTest";
 
     export default {
         name: "TodoList",
-        components: {TodoTask, TaskAdder, TabsBar},
-        // data() {
-        //     return {
-        //         task: {
-        //             content: "tâche 1",
-        //             completed: false,
-        //         },
-        //     }
-        // },
+        components: {TestTest, TodoTask, TaskAdder, TabsBar},
+        data() {
+            return {
+                task: {
+                    content: "tâche 1",
+                    completed: false,
+                },
+                returnValue: false,
+            }
+        },
         methods: {
             completeTask(id) {
                 console.log(id);
+            },
+            ok(e, content) {
+                console.log(e);
+                console.log(content);
             }
         },
         computed: {

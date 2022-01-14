@@ -30,7 +30,6 @@
             count() {
                 return this.$store.state.count;
             },
-
         }
     }
 </script>
