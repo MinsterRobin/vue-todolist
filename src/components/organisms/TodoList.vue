@@ -4,11 +4,10 @@
         <TaskAdder />
         <div v-for="(task, index) in getTasks" :key="index" class="todolist__tasks">
             <div>
-                <TodoTask :task-text="task.content" v-model:completed="task.completed" />
+                <TodoTask :task-text="task.content" :completed="task.completed" @update="ok($event, task.content)" />
                 <p>{{task.completed}}</p>
             </div>
         </div>
-        <TestTest :value="returnValue" @update="ok($event, task.content)"/>
     </div>
 </template>
 
@@ -16,11 +15,10 @@
     import TabsBar from "@/components/molecules/TabsBar";
     import TaskAdder from "@/components/molecules/TaskAdder";
     import TodoTask from "@/components/molecules/TodoTask";
-    import TestTest from "@/components/atoms/TestTest";
 
     export default {
         name: "TodoList",
-        components: {TestTest, TodoTask, TaskAdder, TabsBar},
+        components: {TodoTask, TaskAdder, TabsBar},
         data() {
             return {
                 task: {
