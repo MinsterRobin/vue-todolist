@@ -4,7 +4,7 @@
         <TaskAdder />
         <div v-for="(task, index) in getTasks" :key="index" class="todolist__tasks">
             <div>
-                <TodoTask :task-text="task.content" :completed="task.completed" @update="ok($event, task.content)" />
+                <TodoTask :task-text="task.content" :completed="task.completed" @update="completeTask($event, index)" />
                 <p>{{task.completed}}</p>
             </div>
         </div>
@@ -29,12 +29,10 @@
             }
         },
         methods: {
-            completeTask(id) {
-                console.log(id);
-            },
-            ok(e, content) {
+            completeTask(e, taskIndex) {
                 console.log(e);
-                console.log(content);
+                console.log(taskIndex);
+                this.$store.commit('completeTask', {taskIndex: taskIndex, completed: e});
             }
         },
         computed: {
