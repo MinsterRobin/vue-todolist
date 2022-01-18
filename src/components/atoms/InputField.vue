@@ -1,15 +1,19 @@
 <template>
-    <input class="input" type="text" :placeholder="placeholder">
+    <input
+        class="input"
+        type="text"
+        :placeholder="placeholder"
+        :value="value"
+        :v-model="value"
+        @input='$emit("update:value", $event.target.value)'>
 </template>
 
 <script>
     export default {
         name: "InputField",
         props: {
-            placeholder: {
-                type: String,
-                required: false
-            }
+            placeholder: String,
+            value: String
         }
     }
 </script>

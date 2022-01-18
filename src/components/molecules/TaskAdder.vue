@@ -1,16 +1,25 @@
 <template>
     <div class="task-adder">
-        <InputField placeholder="add details"/>
-        <Button text="Add"/>
+        <InputField
+            placeholder="add details"
+            v-model:value="value"
+        />
+        <Button text="Add" @click="$emit('add', value)"/>
     </div>
 </template>
 
 <script>
     import InputField from "@/components/atoms/InputField";
     import Button from "@/components/atoms/Button";
+
     export default {
         name: "TaskAdder",
-        components: {Button, InputField}
+        components: {Button, InputField},
+        data() {
+            return {
+                value: ""
+            }
+        }
     }
 </script>
 

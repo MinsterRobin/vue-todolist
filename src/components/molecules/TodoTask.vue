@@ -3,6 +3,7 @@
         <input
             class="checkbox"
             type="checkbox"
+            :checked="completed"
             :v-model="completed"
             @change='$emit("update", $event.target.checked)' />
         <p class="task__text" v-bind:class="{task__textChecked: completed}">{{taskText}}</p>

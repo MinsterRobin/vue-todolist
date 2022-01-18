@@ -17,12 +17,11 @@ const store = createStore({
         }
     },
     mutations: {
-        addTask (state) {
-            state.count++
+        addTask (state, payload) {
+
+            state.tasks = [...state.tasks, {content: payload, completed: false}];
         },
         completeTask (state, payload) {
-            console.log(state);
-            console.log(payload);
             state.tasks[payload.taskIndex].completed = payload.completed;
         }
     }

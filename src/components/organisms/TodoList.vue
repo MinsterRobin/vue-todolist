@@ -1,7 +1,7 @@
 <template>
     <div class="todolist">
         <TabsBar />
-        <TaskAdder />
+        <TaskAdder @update="ok($event)" @add="addTask($event)"/>
         <div v-for="(task, index) in getTasks" :key="index" class="todolist__tasks">
             <div>
                 <TodoTask :task-text="task.content" :completed="task.completed" @update="completeTask($event, index)" />
@@ -33,6 +33,12 @@
                 console.log(e);
                 console.log(taskIndex);
                 this.$store.commit('completeTask', {taskIndex: taskIndex, completed: e});
+            },
+            addTask(taskContent) {
+                this.$store.commit('addTask', taskContent);
+            },
+            ok(e) {
+                console.log(e);
             }
         },
         computed: {
