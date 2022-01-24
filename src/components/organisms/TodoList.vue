@@ -41,9 +41,6 @@
             }
         },
         computed: {
-            getFTasks() {
-                return this.$store.state.tasks;
-            },
             getFilteredTasks() {
                 let tasks = this.$store.state.tasks;
                 let filter = this.$store.state.activeFilter;

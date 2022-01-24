@@ -22,20 +22,7 @@ const store = createStore({
         },
         setActiveFilter(state, payload) {
             state.activeFilter = payload;
-        },
-        // getFilteredTasks(state, payload) {
-        //     switch (payload) {
-        //         case "All":
-        //             return state.tasks;
-        //         case "Active":
-        //             return state.tasks.filter(task => task.completed === false);
-        //         case "Completed":
-        //             return state.tasks.filter(task => task.completed === true);
-        //         default:
-        //             return state.tasks;
-        //     }
-        // }
-
+        }
     }
 });
 
