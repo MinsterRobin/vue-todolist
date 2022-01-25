@@ -8,6 +8,10 @@
     import ViewTodoList from "@/views/ViewTodoList";
     export default {
         name: 'App',
+        beforeCreate() {
+            // localStorage.clear();
+            this.$store.commit('initialiseStore');
+        },
         components: {
             ViewTodoList,
         },

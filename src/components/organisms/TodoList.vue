@@ -29,8 +29,6 @@
         },
         methods: {
             completeTask(e, taskIndex) {
-                console.log(e);
-                console.log(taskIndex);
                 this.$store.commit('completeTask', {taskIndex: taskIndex, completed: e});
             },
             addTask(taskContent) {
