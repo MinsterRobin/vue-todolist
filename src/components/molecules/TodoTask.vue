@@ -26,11 +26,6 @@
                 type: Boolean,
                 required: false
             }
-        },
-        computed: {
-            count() {
-                return this.$store.state.count;
-            },
         }
     }
 </script>
