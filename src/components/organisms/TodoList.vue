@@ -33,9 +33,6 @@
             },
             addTask(taskContent) {
                 this.$store.commit('addTask', taskContent);
-            },
-            ok(e) {
-                console.log(e);
             }
         },
         computed: {
