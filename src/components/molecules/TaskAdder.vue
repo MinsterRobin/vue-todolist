@@ -4,17 +4,17 @@
             placeholder="add details"
             v-model:value="value"
         />
-        <Button text="Add" @click="$emit('add', value)"/>
+        <ButTon text="Add" @click="$emit('add', value)"/>
     </div>
 </template>
 
 <script>
     import InputField from "@/components/atoms/InputField";
-    import Button from "@/components/atoms/Button";
+    import ButTon from "@/components/atoms/ButTon";
 
     export default {
         name: "TaskAdder",
-        components: {Button, InputField},
+        components: {ButTon, InputField},
         data() {
             return {
                 value: ""
