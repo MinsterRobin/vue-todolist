@@ -1,17 +1,16 @@
 <template>
     <div class="test">
-        <H1>#todo</H1>
+        <TypoH1>#todo</TypoH1>
         <TodoList />
     </div>
-
 </template>
 
 <script>
-    import H1 from "@/components/atoms/H1";
+    import TypoH1 from "@/components/atoms/TypoH1";
     import TodoList from "@/components/organisms/TodoList";
     export default {
         name: "ViewTodoList",
-        components: {TodoList, H1}
+        components: {TodoList, TypoH1}
     }
 </script>
 
