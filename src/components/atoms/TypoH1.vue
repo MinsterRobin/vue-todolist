@@ -4,7 +4,7 @@
 
 <script>
     export default {
-        name: "H1"
+        name: "TypoH1"
     }
 </script>
 
