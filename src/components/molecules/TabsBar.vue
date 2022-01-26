@@ -9,9 +9,9 @@
         <div class="tab-selector">
             <div class="tab-selector__container">
                 <transition-group name="translation">
-                    <div class="tab-selector__placeholder1" v-bind:class="getActiveFilter"/>
-                    <div class="tab-selector__placeholder2" v-bind:class="getActiveFilter"/>
-                    <div class="tab-selector__selector" v-bind:class="getActiveFilter"/>
+                    <div :key="1" class="tab-selector__placeholder1" v-bind:class="getActiveFilter"/>
+                    <div :key="2" class="tab-selector__placeholder2" v-bind:class="getActiveFilter"/>
+                    <div :key="3" class="tab-selector__selector" v-bind:class="getActiveFilter"/>
                 </transition-group>
             </div>
             <div class="tab-selector__hr"/>
@@ -24,7 +24,6 @@
         name: "TabsBar",
         computed: {
             getActiveFilter() {
-                console.log(this.$store.state.activeFilter);
                 return this.$store.state.activeFilter;
             }
         }

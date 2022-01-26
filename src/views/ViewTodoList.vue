@@ -1,5 +1,5 @@
 <template>
-    <div class="test">
+    <div class="viewTodoList">
         <TypoH1>#todo</TypoH1>
         <TodoList />
     </div>
@@ -17,10 +17,12 @@
 <style scoped lang="scss" rel="stylesheet/scss">
     @import "src/scss/main";
 
-    .test {
+    .viewTodoList {
         display: flex;
         flex-direction: column;
         gap: 40px;
+        align-items: center;
+
         font: {
             family: $font-family-secondary;
             size: $font-size-l;

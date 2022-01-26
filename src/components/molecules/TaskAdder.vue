@@ -3,8 +3,9 @@
         <InputField
             placeholder="add details"
             v-model:value="value"
+            @keyup.enter="$emit('add', value)"
         />
-        <ButTon text="Add" @click="$emit('add', value)"/>
+        <ButTon @click="$emit('add', value)">Add</ButTon>
     </div>
 </template>
 

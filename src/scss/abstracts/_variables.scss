@@ -16,6 +16,7 @@ $font-size-xxl: 3.6rem;
 /// Colors
 $color-primary: #2F80ED;
 $color-secondary: #BDBDBD;
+$color-danger: #EB5757;
 
 $color-text: #333333;
 $color-text-secondary: #000000;
@@ -30,10 +31,10 @@ $border-radius: 12px;
 /// Breakpoints map
 $media-direction: max;
 $breakpoints: (
-        'small': 320px,
-        'medium': 768px,
-        'large': 1024px,
+    'small': 320px,
+    'medium': 768px,
+    'large': 1024px,
 ) !default;
 
 /// Container's maximum width
-$max-width: 1520px !default;
+$max-width: 960px !default;
