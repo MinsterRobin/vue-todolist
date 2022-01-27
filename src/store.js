@@ -17,7 +17,6 @@ const store = createStore({
     },
     mutations: {
         initialiseStore(state) {
-            console.log("init");
             if (localStorage.getItem('tasks')) {
                 state.tasks = JSON.parse(localStorage.getItem('tasks'));
             }

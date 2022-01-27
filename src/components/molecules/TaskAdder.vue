@@ -3,9 +3,9 @@
         <InputField
             placeholder="add details"
             v-model:value="value"
-            @keyup.enter="$emit('add', value)"
+            @keyup.enter="$emit('add', value), value= ''"
         />
-        <ButTon @click="$emit('add', value)">Add</ButTon>
+        <ButTon @click="$emit('add', value), value=''">Add</ButTon>
     </div>
 </template>
 
@@ -19,6 +19,11 @@
         data() {
             return {
                 value: ""
+            }
+        },
+        methods: {
+            clearInputField () {
+                this.value = "";
             }
         }
     }
