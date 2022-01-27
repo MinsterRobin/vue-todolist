@@ -29,9 +29,8 @@ const store = createStore({
             localStorage.setItem('tasks', JSON.stringify(state.tasks));
         },
         completeTask (state, payload) {
-            console.log(payload.taskId);
             let taskIndex = state.tasks.findIndex(task => task._id === payload.taskId);
-            console.log(taskIndex);
+
             if(taskIndex === -1) {
                 console.log("Couldn't update task");
             } else {

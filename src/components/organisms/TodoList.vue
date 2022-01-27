@@ -1,10 +1,12 @@
 <template>
     <div class="todolist">
+
         <TabsBar />
         <TaskAdder v-if="getActiveFilter !== 'Completed'" @update="ok($event)" @add="addTask($event)"/>
+
         <div class="todolist__tasks">
-            <div v-for="(task) in getFilteredTasks" :key="task._id" >
-                <div>
+            <transition-group name="tasks-list">
+                <div v-for="task in getFilteredTasks" :key="task"  class="tasks-list-item">
                     <TodoTask
                         :task-text="task.content"
                         :completed="task.completed"
@@ -13,8 +15,10 @@
                         @delete="deleteTask(task._id)"
                     />
                 </div>
-            </div>
+            </transition-group>
+
         </div>
+
         <ButTon
             @click="deleteAllTasks()"
             v-if="getActiveFilter === 'Completed'"
@@ -23,6 +27,7 @@
             <TrashIcon class="todolist__trash-icon" color="#ffffff"/>
                 delete all
         </ButTon>
+
     </div>
 </template>
 
@@ -54,12 +59,11 @@
                 this.$store.commit('addTask', taskContent);
             },
             deleteTask(taskId) {
-                // console.log(taskIndex);
                 this.$store.commit('deleteTask', taskId);
             },
             deleteAllTasks() {
                 this.$store.commit('deleteAllTasks');
-            }
+            },
         },
         computed: {
             getFilteredTasks() {
@@ -105,5 +109,19 @@
         &__trash-icon {
             height: 17px;
         }
+    }
+
+
+    .tasks-list-leave-active {
+        position: absolute;
+    }
+
+    .tasks-list-enter-from, .tasks-list-leave-to {
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+
+    .tasks-list-item {
+        transition: all 0.3s ease;
     }
 </style>

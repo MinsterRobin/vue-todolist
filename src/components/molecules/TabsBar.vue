@@ -128,7 +128,7 @@
     }
 
     .translation-move {
-        transition: transform .5s ease-out;
+        transition: transform .3s ease-out;
     }
 
 </style>
